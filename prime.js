@@ -1,16 +1,18 @@
-//check the number is prime or not  
-function isBoolean(num){
-   for(let i = 2 ; i<num ; i++){
-        if(i%num === 0){
+const isPrime = (num)=>{
+
+    if (num < 2) return false;
+    let sqrtNum = Math.sqrt(num);
+    console.log(sqrtNum)
+
+   for(let i = 2 ; i<= sqrtNum ; i++){
+        if(num % i === 0 ){
             return false ;
         }
-        else{
-            return true ;
-        }
-   }  
+   }
+   return true;
 }
 
-console.log(isBoolean(6));
+console.log(isPrime(14));
 
 
 
